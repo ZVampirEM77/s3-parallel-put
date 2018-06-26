@@ -20,7 +20,7 @@ function time_cost()
 } 
 
 # with 'resume', it seems that, we resume from previous uploads
-begin=$(date)
+begin=$(env LANG=en_US.UTF-8 date -u)
 echo "${begin} >>> begin"
 jobs=$(cat /proc/cpuinfo| grep "processor"| wc -l)
 
@@ -33,6 +33,6 @@ ${UPLOAD_TOOL} --bucket=${BUCKET} \
 	--process=${jobs} \
 	--log-filename=${LOG} \
 	"${LOCAL_DIRS}"
-end=$(date)
+end=$(env LANG=en_US.UTF-8 date -u)
 cost=$(time_cost "$begin" "$end")
 echo "${end} >>> end, cost ${cost} seconds"

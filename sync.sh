@@ -9,7 +9,7 @@ LOG="./upload.log"
 export AWS_ACCESS_KEY_ID="0555b35654ad1656d804"
 export AWS_SECRET_ACCESS_KEY="h7GhxuBLTrlhVUyxSPUKUV8r/2EI4ngqJxD7iBdBYLhwluN30JaT3Q=="
 
-jobs=$(cat /proc/cpuinfo| grep "processor"| wc -l)
+#jobs=$(cat /proc/cpuinfo| grep "processor"| wc -l)
 
 function time_cost()                                                                                 
 {                                                                                                    
